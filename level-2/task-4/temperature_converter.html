@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter - Cognifyz Task 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .conversion-box {
+            background: #f7f7f7;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .result {
+            background: #e8f4f8;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .result-label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .result-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .formula {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+        
+        .reference {
+            margin-top: 20px;
+            background: #fff3e0;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .reference h3 {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .reference table {
+            width: 100%;
+            font-size: 12px;
+        }
+        
+        .reference td {
+            padding: 5px;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .weather-context {
+            margin-top: 15px;
+            padding: 10px;
+            background: #d5f4e6;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌡️ Temperature Converter</h1>
+        <div class="subtitle">Cognifyz Internship - Level 2, Task 4</div>
+        
+        <div class="conversion-box">
+            <div class="input-group">
+                <label>📋 Conversion Direction</label>
+                <select id="conversionType">
+                    <option value="c2f">🌡️ Celsius to Fahrenheit (°C → °F)</option>
+                    <option value="f2c">🌡️ Fahrenheit to Celsius (°F → °C)</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label>🌡️ Enter Temperature</label>
+                <input type="number" id="temperature" placeholder="Enter temperature value..." step="any">
+                <div id="error" class="error"></div>
+            </div>
+            
+            <button onclick="convert()">🔄 Convert Temperature</button>
+            
+            <div class="result" id="result" style="display: none;">
+                <div class="result-label">Converted Temperature</div>
+                <div class="result-value" id="resultValue">0</div>
+                <div id="formula" class="formula"></div>
+                <div id="weather" class="weather-context"></div>
+            </div>
+        </div>
+        
+        <div class="reference">
+            <h3>📊 Quick Reference</h3>
+            <table>
+                <tr><td>0°C (Freezing)</td><td>→</td><td>32°F</td></tr>
+                <tr><td>25°C (Room Temp)</td><td>→</td><td>77°F</td></tr>
+                <tr><td>37°C (Body Temp)</td><td>→</td><td>98.6°F</td></tr>
+                <tr><td>100°C (Boiling)</td><td>→</td><td>212°F</td></tr>
+                <tr><td>-40°C</td><td>→</td><td>-40°F</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+        
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+        
+        function getWeatherContext(temp, unit) {
+            if (unit === 'C') {
+                if (temp <= 0) return "❄️ Freezing cold! Wear heavy winter clothes.";
+                if (temp <= 10) return "🧥 Very cold! Wear a warm jacket.";
+                if (temp <= 20) return "🍂 Cool weather. A light jacket might help.";
+                if (temp <= 30) return "☀️ Pleasant weather. Comfortable temperature!";
+                if (temp <= 40) return "🔥 Hot weather! Stay hydrated.";
+                return "🥵 Extremely hot! Avoid going outside.";
+            } else {
+                if (temp <= 32) return "❄️ Freezing cold! Wear heavy winter clothes.";
+                if (temp <= 50) return "🧥 Very cold! Wear a warm jacket.";
+                if (temp <= 68) return "🍂 Cool weather. A light jacket might help.";
+                if (temp <= 86) return "☀️ Pleasant weather. Comfortable temperature!";
+                if (temp <= 104) return "🔥 Hot weather! Stay hydrated.";
+                return "🥵 Extremely hot! Avoid going outside.";
+            }
+        }
+        
+        function convert() {
+            const conversionType = document.getElementById('conversionType').value;
+            let temp = document.getElementById('temperature').value;
+            const errorDiv = document.getElementById('error');
+            const resultDiv = document.getElementById('result');
+            
+            // Clear previous error
+            errorDiv.textContent = '';
+            
+            // Validate input
+            if (temp === '') {
+                errorDiv.textContent = '❌ Please enter a temperature value';
+                resultDiv.style.display = 'none';
+                return;
+            }
+            
+            temp = parseFloat(temp);
+            
+            if (isNaN(temp)) {
+                errorDiv.textContent = '❌ Please enter a valid number';
+                resultDiv.style.display = 'none';
+                return;
+            }
+            
+            let result, formula, resultUnit, weatherTemp, weatherUnit;
+            
+            if (conversionType === 'c2f') {
+                result = celsiusToFahrenheit(temp);
+                formula = `Formula: (°C × 9/5) + 32 = (${temp} × 9/5) + 32 = ${result.toFixed(2)}°F`;
+                resultUnit = '°F';
+                weatherTemp = temp;
+                weatherUnit = 'C';
+            } else {
+                result = fahrenheitToCelsius(temp);
+                formula = `Formula: (°F - 32) × 5/9 = (${temp} - 32) × 5/9 = ${result.toFixed(2)}°C`;
+                resultUnit = '°C';
+                weatherTemp = temp;
+                weatherUnit = 'F';
+            }
+            
+            // Display result
+            document.getElementById('resultValue').innerHTML = `${result.toFixed(2)}${resultUnit}`;
+            document.getElementById('formula').innerHTML = formula;
+            
+            // Display weather context
+            const weatherContext = getWeatherContext(weatherTemp, weatherUnit);
+            document.getElementById('weather').innerHTML = weatherContext;
+            
+            resultDiv.style.display = 'block';
+        }
+        
+        // Allow Enter key to trigger conversion
+        document.getElementById('temperature').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                convert();
+            }
+        });
+    </script>
+</body>
+</html>

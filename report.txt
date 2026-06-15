@@ -1,0 +1,37 @@
+# Cognifyz Internship Completion Report
+
+## Intern Information
+- **Name:** kanigelpula suchitra
+- **Program:** Software Development Internship
+- **Status:** Completed ✅
+
+## Tasks Completed
+
+### Level 1: Beginner (2 tasks)
+1. **Higher or Lower Card Game**
+   - Implemented game logic using conditional statements
+   - Added score tracking and replay feature
+
+2. **Prime Number Pyramid**
+   - Generated pyramid pattern using nested loops
+   - Implemented prime number checking algorithm
+
+### Level 2: Intermediate (2 tasks)
+3. **Expense Tracker CRUD**
+   - Full Create, Read, Update, Delete operations
+   - Category-wise summaries and monthly reports
+
+4. **Temperature Converter**
+   - Celsius ↔ Fahrenheit conversion
+   - Batch conversion and comparison tools
+
+### Level 3: Advanced (2 tasks)
+5. **Expense Tracker with File I/O**
+   - JSON file storage for data persistence
+   - Auto-save, backup/restore functionality
+
+6. **Job Listing Web Scraper**
+   - Scraped job data using requests & BeautifulSoup
+   - Export to CSV/JSON with statistics
+## Conclusion
+I have successfully completed all 6 tasks of the Cognifyz Software Development Internship...

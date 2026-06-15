@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Senior Python Developer",
+    "company": "TechCorp Solutions",
+    "location": "New York, NY (Remote)",
+    "salary": "$120,000 - $150,000",
+    "description": "Looking for an experienced Python developer with 5+ years experience in Django and FastAPI. Must have strong database skills.",
+    "url": "https://example.com/job/1",
+    "posted_date": "2 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "Analytics Pro",
+    "location": "San Francisco, CA",
+    "salary": "$130,000 - $160,000",
+    "description": "Seeking data scientist with ML experience. Python, TensorFlow, and SQL required.",
+    "url": "https://example.com/job/2",
+    "posted_date": "1 day ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Frontend React Developer",
+    "company": "Web Innovations",
+    "location": "Austin, TX (Hybrid)",
+    "salary": "$100,000 - $130,000",
+    "description": "React, TypeScript, and Next.js expert needed for exciting web projects.",
+    "url": "https://example.com/job/3",
+    "posted_date": "3 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "Cloud Systems Inc",
+    "location": "Seattle, WA",
+    "salary": "$115,000 - $145,000",
+    "description": "AWS, Docker, Kubernetes experience required. CI/CD pipeline management.",
+    "url": "https://example.com/job/4",
+    "posted_date": "Yesterday",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Full Stack JavaScript Developer",
+    "company": "Startup Hub",
+    "location": "Remote (US only)",
+    "salary": "$90,000 - $120,000",
+    "description": "Node.js, React, MongoDB. Fast-paced startup environment.",
+    "url": "https://example.com/job/5",
+    "posted_date": "5 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Python Backend Engineer",
+    "company": "DataFlow Systems",
+    "location": "Remote",
+    "salary": "$110,000 - $140,000",
+    "description": "Python, Django, PostgreSQL. Building scalable APIs.",
+    "url": "https://remoteok.io/job/123",
+    "posted_date": "2 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "company": "AI Innovations",
+    "location": "San Francisco, CA",
+    "salary": "$150,000 - $180,000",
+    "description": "ML models, TensorFlow, PyTorch. PhD preferred.",
+    "url": "https://remoteok.io/job/124",
+    "posted_date": "1 week ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Cloud Architect",
+    "company": "Amazon Web Services",
+    "location": "Seattle, WA",
+    "salary": "$160,000 - $200,000",
+    "description": "AWS solutions architecture, cloud migration.",
+    "url": "https://remoteok.io/job/125",
+    "posted_date": "3 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Junior Web Developer",
+    "company": "Creative Agency",
+    "location": "Los Angeles, CA",
+    "salary": "$65,000 - $85,000",
+    "description": "HTML, CSS, JavaScript. Entry level welcome.",
+    "url": "https://remoteok.io/job/126",
+    "posted_date": "1 day ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  },
+  {
+    "title": "Security Analyst",
+    "company": "CyberShield",
+    "location": "Washington, DC",
+    "salary": "$95,000 - $120,000",
+    "description": "Cybersecurity, penetration testing, risk assessment.",
+    "url": "https://remoteok.io/job/127",
+    "posted_date": "4 days ago",
+    "scraped_date": "2026-06-15 14:30:00"
+  }
+]

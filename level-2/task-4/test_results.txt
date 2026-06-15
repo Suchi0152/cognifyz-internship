@@ -1,0 +1,43 @@
+==================================================
+🌡️ TEMPERATURE CONVERTER 🌡️
+==================================================
+Convert between Celsius and Fahrenheit easily!
+
+==================================================
+📊 QUICK REFERENCE - COMMON TEMPERATURES
+==================================================
+Celsius (°C)    | Fahrenheit (°F)
+--------------------------------
+0°C (Freezing)  | 32°F
+25°C (Room Temp)| 77°F
+37°C (Body Temp)| 98.6°F
+100°C (Boiling) | 212°F
+==================================================
+
+==================================================
+📋 CONVERSION OPTIONS
+==================================================
+1. 🌡️  Celsius to Fahrenheit (°C → °F)
+2. 🌡️  Fahrenheit to Celsius (°F → °C)
+3. ❌ Exit program
+==================================================
+
+Enter your choice (1, 2, or 3): 1
+
+==================================================
+🌡️  CELSIUS TO FAHRENHEIT CONVERTER
+==================================================
+Enter the temperature value: 25
+
+==================================================
+🔄 CONVERSION RESULT
+==================================================
+📝 Input: 25.0°C
+✨ Output: 77.00°F
+==================================================
+
+📐 Formula used: (°C × 9/5) + 32
+   (25.0 × 9/5) + 32 = 77.00°F
+
+🌍 WEATHER CONTEXT:
+   ☀️  Pleasant weather. Comfortable temperature!

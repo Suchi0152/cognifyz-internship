@@ -1,0 +1,11 @@
+title,company,location,salary,description,url,posted_date,scraped_date
+"Senior Python Developer","TechCorp Solutions","New York, NY (Remote)","$120,000 - $150,000","Looking for an experienced Python developer with 5+ years experience in Django and FastAPI. Must have strong database skills.","https://example.com/job/1","2 days ago","2026-06-15 14:30:00"
+"Data Scientist","Analytics Pro","San Francisco, CA","$130,000 - $160,000","Seeking data scientist with ML experience. Python, TensorFlow, and SQL required.","https://example.com/job/2","1 day ago","2026-06-15 14:30:00"
+"Frontend React Developer","Web Innovations","Austin, TX (Hybrid)","$100,000 - $130,000","React, TypeScript, and Next.js expert needed for exciting web projects.","https://example.com/job/3","3 days ago","2026-06-15 14:30:00"
+"DevOps Engineer","Cloud Systems Inc","Seattle, WA","$115,000 - $145,000","AWS, Docker, Kubernetes experience required. CI/CD pipeline management.","https://example.com/job/4","Yesterday","2026-06-15 14:30:00"
+"Full Stack JavaScript Developer","Startup Hub","Remote (US only)","$90,000 - $120,000","Node.js, React, MongoDB. Fast-paced startup environment.","https://example.com/job/5","5 days ago","2026-06-15 14:30:00"
+"Python Backend Engineer","DataFlow Systems","Remote","$110,000 - $140,000","Python, Django, PostgreSQL. Building scalable APIs.","https://remoteok.io/job/123","2 days ago","2026-06-15 14:30:00"
+"Machine Learning Engineer","AI Innovations","San Francisco, CA","$150,000 - $180,000","ML models, TensorFlow, PyTorch. PhD preferred.","https://remoteok.io/job/124","1 week ago","2026-06-15 14:30:00"
+"Cloud Architect","Amazon Web Services","Seattle, WA","$160,000 - $200,000","AWS solutions architecture, cloud migration.","https://remoteok.io/job/125","3 days ago","2026-06-15 14:30:00"
+"Junior Web Developer","Creative Agency","Los Angeles, CA","$65,000 - $85,000","HTML, CSS, JavaScript. Entry level welcome.","https://remoteok.io/job/126","1 day ago","2026-06-15 14:30:00"
+"Security Analyst","CyberShield","Washington, DC","$95,000 - $120,000","Cybersecurity, penetration testing, risk assessment.","https://remoteok.io/job/127","4 days ago","2026-06-15 14:30:00"

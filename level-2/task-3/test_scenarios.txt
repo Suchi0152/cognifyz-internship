@@ -1,0 +1,37 @@
+Test Case 1: Create (Add)
+text
+Scenario: Add a new expense
+Input: Amount=₹150, Category=Food, Date=2026-06-15, Description=Lunch
+Expected: New expense created with next available ID
+✅ Verify: Shows "Expense added successfully"
+Test Case 2: Read (View)
+text
+Scenario 2a: View all expenses
+Expected: Shows table with all expenses including new one
+✅ Verify: Sample + new expense visible
+
+Scenario 2b: View by ID
+Input: ID=1
+Expected: Shows detailed view of expense ID 1
+✅ Verify: Correct details displayed
+Test Case 3: Update
+text
+Scenario: Modify existing expense
+Input: ID=2, Change amount to ₹75, category to "Transport"
+Expected: Expense updated with new values
+✅ Verify: Updated details shown
+Test Case 4: Delete
+text
+Scenario: Remove an expense
+Input: ID=5, Confirm "yes"
+Expected: Expense removed from list
+✅ Verify: No longer appears in "View all"
+Test Case 5: Reports
+text
+Scenario 5a: Category summary
+Expected: Shows totals by category (Food, Transport, etc.)
+✅ Verify: Percentages add to 100%
+
+Scenario 5b: Monthly report
+Expected: Shows expenses grouped by month
+✅ Verify: Correct totals per month
