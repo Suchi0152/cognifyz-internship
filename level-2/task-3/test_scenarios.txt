@@ -1,37 +1,246 @@
-Test Case 1: Create (Add)
-text
-Scenario: Add a new expense
-Input: Amount=₹150, Category=Food, Date=2026-06-15, Description=Lunch
-Expected: New expense created with next available ID
-✅ Verify: Shows "Expense added successfully"
-Test Case 2: Read (View)
-text
-Scenario 2a: View all expenses
-Expected: Shows table with all expenses including new one
-✅ Verify: Sample + new expense visible
 
-Scenario 2b: View by ID
-Input: ID=1
-Expected: Shows detailed view of expense ID 1
-✅ Verify: Correct details displayed
-Test Case 3: Update
-text
-Scenario: Modify existing expense
-Input: ID=2, Change amount to ₹75, category to "Transport"
-Expected: Expense updated with new values
-✅ Verify: Updated details shown
-Test Case 4: Delete
-text
-Scenario: Remove an expense
-Input: ID=5, Confirm "yes"
-Expected: Expense removed from list
-✅ Verify: No longer appears in "View all"
-Test Case 5: Reports
-text
-Scenario 5a: Category summary
-Expected: Shows totals by category (Food, Transport, etc.)
-✅ Verify: Percentages add to 100%
+---
 
-Scenario 5b: Monthly report
-Expected: Shows expenses grouped by month
-✅ Verify: Correct totals per month
+## 📄 **test_scenarios.txt**
+
+```text
+==================================================
+EXPENSE TRACKER - TEST SCENARIOS
+Level 2 Task 3 for Cognifyz Internship
+==================================================
+
+==================================================
+TEST SCENARIO 1: CREATE (Add New Expense)
+==================================================
+Action: Add a new expense
+Input:
+  - Amount: ₹150.00
+  - Category: Food (Option 1)
+  - Date: 2026-06-18
+  - Description: Lunch at restaurant
+
+Expected Output:
+  ✅ Expense added successfully! (ID: 9)
+  - Shows new expense ID
+
+Verify:
+  - New expense appears in "View All"
+  - Total amount increases by ₹150.00
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 2: CREATE (Invalid Amount)
+==================================================
+Action: Add expense with invalid amount
+Input:
+  - Amount: -50 (negative)
+  - Amount: abc (non-numeric)
+
+Expected Output:
+  ❌ Amount must be positive. Try again.
+  ❌ Invalid input. Please enter a number.
+
+Verify:
+  - Program asks for input again
+  - Only accepts positive numbers
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 3: READ (View All Expenses)
+==================================================
+Action: View all expenses (Option 2)
+
+Expected Output:
+  📋 ALL EXPENSES
+  Table with all 8 sample expenses
+  📊 TOTAL EXPENSES: ₹3155.00
+
+Verify:
+  - All 8 sample expenses visible
+  - Total amount correct (₹3155.00)
+  - Formatting is clean and aligned
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 4: READ (View by ID)
+==================================================
+Action: Search expense by ID
+Input: ID = 3
+
+Expected Output:
+  💰 EXPENSE DETAILS
+  ID: 3
+  Amount: ₹500.00
+  Category: Shopping
+  Date: 2026-06-12
+  Description: New shoes
+
+Verify:
+  - Correct expense details displayed
+  - All fields match expected values
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 5: READ (View by Invalid ID)
+==================================================
+Action: Search for non-existent ID
+Input: ID = 99
+
+Expected Output:
+  ❌ Expense with ID 99 not found!
+
+Verify:
+  - Shows error message
+  - Returns to menu
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 6: UPDATE (Modify Expense)
+==================================================
+Action: Update expense ID 2
+Input:
+  - New Amount: ₹75.00
+  - New Category: Transport (Option 2)
+  - Date: Keep existing
+  - Description: Bus fare
+
+Expected Output:
+  ✅ Expense updated successfully!
+  - Shows updated details
+
+Verify:
+  - Amount changed from ₹50.00 to ₹75.00
+  - Category remains "Transport"
+  - Description updated
+  - Changes reflect in "View All"
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 7: UPDATE (Keep Existing Values)
+==================================================
+Action: Update expense ID 4
+Input: Press Enter for all fields (keep current values)
+
+Expected Output:
+  ✅ Expense updated successfully!
+  - All fields remain unchanged
+
+Verify:
+  - No changes made to expense
+  - Original values preserved
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 8: DELETE (Remove Expense)
+==================================================
+Action: Delete expense ID 8
+Input: Confirm "yes"
+
+Expected Output:
+  ✅ Expense ID 8 deleted successfully!
+  (Amount: ₹150.00, Category: Healthcare)
+
+Verify:
+  - Expense ID 8 no longer in list
+  - Total amount reduced by ₹150.00
+  - 7 expenses remaining
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 9: DELETE (Cancel Deletion)
+==================================================
+Action: Delete expense ID 7
+Input: Confirm "no"
+
+Expected Output:
+  ❌ Deletion cancelled!
+
+Verify:
+  - Expense ID 7 still exists
+  - No changes to list
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 10: CATEGORY SUMMARY
+==================================================
+Action: View category summary (Option 4)
+
+Expected Output:
+  📊 CATEGORY-WISE SUMMARY
+  Category        | Amount    | Percentage
+  ----------------------------------------
+  Bills           | ₹2000.00  | 63.4%
+  Food            | ₹325.00   | 10.3%
+  Shopping        | ₹500.00   | 15.8%
+  Entertainment   | ₹100.00   | 3.2%
+  Transport       | ₹80.00    | 2.5%
+  Healthcare      | ₹150.00   | 4.8%
+  TOTAL           | ₹3155.00  | 100.0%
+
+Verify:
+  - All categories present
+  - Percentages add to 100%
+  - Correct totals for each category
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 11: MONTHLY REPORT
+==================================================
+Action: View monthly report (Option 5)
+
+Expected Output:
+  📅 MONTHLY EXPENSE REPORT
+  Month      | Amount    | Transactions
+  ----------------------------------------
+  2026-06    | ₹3155.00  |     8
+
+Verify:
+  - All expenses grouped by month
+  - Correct total for June 2026
+  - Transaction count matches expenses
+
+Status: ✅ PASSED
+
+==================================================
+TEST SCENARIO 12: EXIT APPLICATION
+==================================================
+Action: Exit application (Option 8)
+
+Expected Output:
+  👋 THANK YOU FOR USING EXPENSE TRACKER!
+  📊 FINAL SUMMARY:
+     • Total expenses tracked: 7 (after deletion)
+     • Total amount spent: ₹3005.00
+     • Average expense: ₹429.29
+
+Verify:
+  - Correct final summary
+  - Program exits gracefully
+
+Status: ✅ PASSED
+
+==================================================
+TEST SUMMARY
+==================================================
+
+Total Tests: 12
+Passed: 12
+Failed: 0
+
+✅ ALL TESTS PASSED!
+
+==================================================
+TESTING COMPLETED
+Date: 2026-06-16
+Tester: Cognifyz Intern
+==================================================

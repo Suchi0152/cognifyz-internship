@@ -1,35 +1,38 @@
-# Higher or Lower Card Game
+========================================
+🃏 HIGHER OR LOWER CARD GAME 🃏
+========================================
+Rules:
+- Cards are 1 (Ace) to 13 (King)
+- Guess if the next card will be Higher (H) or Lower (L)
+- If the cards are equal, you lose that round
+- You'll play 5 rounds
+========================================
 
-## Description
-A text-based card game where players guess if the next card is higher or lower.
+🔄 ROUND 1 of 5
+------------------------------
+📊 First card: 7
+Will the next card be Higher (H) or Lower (L)? H
 
-## How to Run
-python higher_lower_game.py
+📊 Second card: King
+✅ WIN! The second card is HIGHER!
+📈 Current score: 1/1
 
-## Game Rules
-- Cards: Ace(1) to King(13)
-- Guess H (Higher) or L (Lower)
-- Win 1 point per correct guess
-- Play 5 rounds
+🔄 ROUND 2 of 5
+------------------------------
+📊 First card: 3
+Will the next card be Higher (H) or Lower (L)? L
 
-## Conditional Statements Used
-- if/elif/else for win/loss logic
-- while loop for input validation
-- if/else for score-based final message
+📊 Second card: 2
+✅ WIN! The second card is LOWER!
+📈 Current score: 2/2
 
+... (continue for 5 rounds) ...
 
-START
-  generate random number (1–20)
-  set attempts = 0, maxAttempts = 5
-  WHILE attempts < maxAttempts
-    ask user for guess
-    attempts++
-    IF guess == randomNumber
-      print "Correct!" and exit
-    ELSE IF guess < randomNumber
-      print "Too low"
-    ELSE
-      print "Too high"
-  END WHILE
-  print "Out of attempts! The number was X"
-END
+========================================
+🎮 GAME OVER! 🎮
+========================================
+🏆 Your final score: 4 out of 5
+👍 Great job! You have good intuition!
+
+🔁 Play again? (yes/no): no
+Thanks for playing! 👋

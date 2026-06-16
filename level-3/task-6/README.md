@@ -3,19 +3,21 @@
 ## 📋 Project Information
 - **Task:** Level 3, Task 6
 - **Internship:** Cognifyz Software Development Program
-- **Language:** Python 3
-- **Libraries:** requests, BeautifulSoup4, csv, json
+- **Language:** Java
+- **Concept:** Web Scraping, Data Extraction
 
 ## 🎯 Objective
-Create a program for interactive web scraping. Fetch data from websites and present it in a user-friendly way using a simple web scraping library.
+Create a program for interactive web scraping. Fetch data from websites and present it in a user-friendly way.
 
 ## ✨ Features
 
 ### Core Features (Following 4 Steps)
-- ✅ **Step 1:** Selected job websites and identified data to scrape
-- ✅ **Step 2:** Utilized requests + BeautifulSoup for web scraping
-- ✅ **Step 3:** Designed user-friendly menu interface
-- ✅ **Step 4:** Tested with different websites and keywords
+| Step | Feature | Implementation |
+|------|---------|----------------|
+| Step 1 | Select website & identify data | RemoteOK.io + Indeed demo |
+| Step 2 | Utilize web scraping library | HTTPURLConnection + regex parsing |
+| Step 3 | User-friendly presentation | Menu system, formatted output |
+| Step 4 | Test different websites | Multiple keywords, locations |
 
 ### Additional Features
 - 🔍 **Keyword Search** - Filter jobs by title/description
@@ -27,18 +29,30 @@ Create a program for interactive web scraping. Fetch data from websites and pres
 
 ## 🛠️ Technologies Used
 
-| Library | Purpose |
-|---------|---------|
-| `requests` | Fetch web pages |
-| `BeautifulSoup4` | Parse HTML content |
-| `csv` | Export to spreadsheet format |
-| `json` | Export to structured format |
-| `time` | Rate limiting (polite scraping) |
+| Technology | Purpose |
+|------------|---------|
+| **Java** | Core programming language |
+| **HttpURLConnection** | Fetch web pages |
+| **Regex** | HTML parsing |
+| **CSV** | Export to spreadsheet format |
+| **JSON** | Export to structured format |
 
-## 📦 Installation
+## 🚀 How to Run
 
+### Option 1: Using VS Code
+1. Open VS Code
+2. Open project folder: `C:\Users\kanig\OneDrive\Desktop\cognifyz`
+3. Navigate to: `level-3/task-6/JobScraper.java`
+4. Click the ▶️ **Run** button (top-right)
+5. OR press `Ctrl + F5`
+
+### Option 2: Using Terminal
 ```bash
-# Install required libraries
-pip install requests
-pip install beautifulsoup4
-pip install lxml  # optional, for better performance
+# Navigate to task folder
+cd C:\Users\kanig\OneDrive\Desktop\cognifyz\level-3\task-6
+
+# Compile
+javac JobScraper.java
+
+# Run
+java JobScraper

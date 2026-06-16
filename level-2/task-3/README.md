@@ -1,48 +1,38 @@
-# Expense Tracker - CRUD Application
+# 💰 Expense Tracker - CRUD Application
 
-## Description
-A console-based expense tracker with full CRUD operations and reporting features.
+## 📋 Project Information
+- **Task:** Level 2, Task 3
+- **Internship:** Cognifyz Software Development Program
+- **Language:** Java
+- **Concept:** CRUD Operations (Create, Read, Update, Delete)
 
-## Features (CRUD)
-- **CREATE:** Add new expenses with amount, category, date, description
-- **READ:** View all expenses or search by ID
-- **UPDATE:** Modify existing expense details
-- **DELETE:** Remove expenses with confirmation
+## 🎯 Objective
+Implement Create, Read, Update, and Delete operations using arrays or lists for data storage.
 
-## Additional Features
-- Category-wise spending summary
-- Monthly expense reports
-- Auto-incrementing IDs
-- Input validation
+## ✨ Features
 
-## How to Run
-```bash
-python expense_tracker.py
+### Core Features (CRUD)
+| Operation | Description | Menu Option |
+|-----------|-------------|-------------|
+| **CREATE** | Add new expense with amount, category, date, description | Option 1 |
+| **READ** | View all expenses or search by ID | Options 2 & 3 |
+| **UPDATE** | Modify existing expense details | Option 6 |
+| **DELETE** | Remove expense with confirmation | Option 7 |
 
+### Additional Features
+- 📊 **Category Summary** - View spending by category with percentages
+- 📅 **Monthly Report** - View expenses grouped by month
+- 🎯 **Input Validation** - Handles invalid inputs gracefully
+- 📋 **Sample Data** - Pre-loaded with 8 sample expenses for testing
 
----
+## 🛠️ Technologies Used
 
-## ✅ **Summary - Following Your 6 Steps**
+| Technology | Purpose |
+|------------|---------|
+| **Java** | Core programming language |
+| **ArrayList** | Dynamic list for storing expenses |
+| **HashMap** | Category and monthly summaries |
+| **Scanner** | User input handling |
+| **LocalDate** | Date handling |
 
-| Step | What You Implemented |
-|------|---------------------|
-| 1 | `Expense` class with id, amount, category, date, description |
-| 2 | `create_expense()` function with validation |
-| 3 | `display_all_expenses()`, `display_by_id()`, reports |
-| 4 | `update_expense()` with field-by-field editing |
-| 5 | `delete_expense()` with confirmation |
-| 6 | Tested with sample data + 5 test scenarios |
-
----
-
-## 🚀 **Ready to Run?**
-
-**Quickest way:** Use [Replit](https://replit.com/languages/python3) - copy-paste all the code and click Run!
-
-Let me know if you want:
-- HTML/JavaScript version (no Python needed)
-- Save expenses to file (so data persists)
-- Add budget limits feature
-- Export to CSV
-
-What would you like to do next? 🎯
+## 📁 Expense Class Structure

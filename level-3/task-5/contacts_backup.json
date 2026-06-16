@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "phone": "+1-555-1234",
+        "email": "john.doe@email.com",
+        "address": "123 Main Street, New York, NY 10001",
+        "category": "Work"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "phone": "+1-555-5678",
+        "email": "jane.smith@email.com",
+        "address": "456 Oak Avenue, Los Angeles, CA 90001",
+        "category": "Friends"
+    },
+    {
+        "id": 3,
+        "name": "Robert Johnson",
+        "phone": "+1-555-9012",
+        "email": "robert.j@email.com",
+        "address": "789 Pine Road, Chicago, IL 60601",
+        "category": "Family"
+    },
+    {
+        "id": 4,
+        "name": "Emily Davis",
+        "phone": "+1-555-3456",
+        "email": "emily.davis@email.com",
+        "address": "321 Elm Street, Houston, TX 77001",
+        "category": "Work"
+    },
+    {
+        "id": 5,
+        "name": "Michael Brown",
+        "phone": "+1-555-7890",
+        "email": "michael.b@email.com",
+        "address": "654 Maple Drive, Phoenix, AZ 85001",
+        "category": "Friends"
+    }
+]

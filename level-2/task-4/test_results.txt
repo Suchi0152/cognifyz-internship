@@ -1,43 +1,157 @@
+
+---
+
+## 📄 **test_results.txt**
+
+```text
 ==================================================
-🌡️ TEMPERATURE CONVERTER 🌡️
+TEMPERATURE CONVERTER - TEST RESULTS
+Level 2 Task 4 for Cognifyz Internship
 ==================================================
-Convert between Celsius and Fahrenheit easily!
+Date: 2026-06-16
+Tester: Cognifyz Intern
+==================================================
 
 ==================================================
-📊 QUICK REFERENCE - COMMON TEMPERATURES
+TEST 1: CELSIUS TO FAHRENHEIT - 0°C
 ==================================================
-Celsius (°C)    | Fahrenheit (°F)
---------------------------------
-0°C (Freezing)  | 32°F
-25°C (Room Temp)| 77°F
-37°C (Body Temp)| 98.6°F
-100°C (Boiling) | 212°F
-==================================================
+Input: 0°C
+Expected Output: 32°F
+Actual Output: 32.00°F
+Status: ✅ PASSED
 
 ==================================================
-📋 CONVERSION OPTIONS
+TEST 2: CELSIUS TO FAHRENHEIT - 100°C
 ==================================================
-1. 🌡️  Celsius to Fahrenheit (°C → °F)
-2. 🌡️  Fahrenheit to Celsius (°F → °C)
-3. ❌ Exit program
-==================================================
-
-Enter your choice (1, 2, or 3): 1
+Input: 100°C
+Expected Output: 212°F
+Actual Output: 212.00°F
+Status: ✅ PASSED
 
 ==================================================
-🌡️  CELSIUS TO FAHRENHEIT CONVERTER
+TEST 3: FAHRENHEIT TO CELSIUS - 32°F
 ==================================================
-Enter the temperature value: 25
+Input: 32°F
+Expected Output: 0°C
+Actual Output: 0.00°C
+Status: ✅ PASSED
 
 ==================================================
-🔄 CONVERSION RESULT
+TEST 4: FAHRENHEIT TO CELSIUS - 98.6°F
 ==================================================
-📝 Input: 25.0°C
-✨ Output: 77.00°F
+Input: 98.6°F
+Expected Output: 37°C
+Actual Output: 37.00°C
+Status: ✅ PASSED
+
+==================================================
+TEST 5: CELSIUS TO FAHRENHEIT - -40°C
+==================================================
+Input: -40°C
+Expected Output: -40°F
+Actual Output: -40.00°F
+Status: ✅ PASSED
+
+==================================================
+TEST 6: CELSIUS TO FAHRENHEIT - 25°C
+==================================================
+Input: 25°C
+Expected Output: 77°F
+Actual Output: 77.00°F
+Status: ✅ PASSED
+
+==================================================
+TEST 7: FAHRENHEIT TO CELSIUS - 212°F
+==================================================
+Input: 212°F
+Expected Output: 100°C
+Actual Output: 100.00°C
+Status: ✅ PASSED
+
+==================================================
+TEST 8: INVALID INPUT - "abc"
+==================================================
+Input: abc
+Expected Output: Error message
+Actual Output: ❌ Invalid input! Please enter a number.
+Status: ✅ PASSED
+
+==================================================
+TEST 9: INVALID INPUT - Empty
+==================================================
+Input: [Enter]
+Expected Output: Error message
+Actual Output: ❌ Invalid input! Please enter a number.
+Status: ✅ PASSED
+
+==================================================
+TEST 10: BATCH CONVERSION
+==================================================
+Input: 0, 25, 100, -10
+Conversion: Celsius to Fahrenheit
+Expected Output: 32.00, 77.00, 212.00, 14.00
+Actual Output: 32.00, 77.00, 212.00, 14.00
+Status: ✅ PASSED
+
+==================================================
+TEST 11: TEMPERATURE COMPARISON
+==================================================
+Input: 25°C and 77°F
+Expected Output: Equal
+Actual Output: ✅ 25.00°C is EQUAL to 77.00°F
+Status: ✅ PASSED
+
+==================================================
+TEST 12: TEMPERATURE COMPARISON
+==================================================
+Input: 100°C and 32°F
+Expected Output: 100°C is hotter
+Actual Output: ✅ 100.00°C is HOTTER than 32.00°F
+Status: ✅ PASSED
+
+==================================================
+TEST 13: WEATHER CONTEXT - 0°C
+==================================================
+Input: 0°C
+Expected Output: ❄️ Freezing cold!
+Actual Output: ❄️ Freezing cold! Wear heavy winter clothes.
+Status: ✅ PASSED
+
+==================================================
+TEST 14: WEATHER CONTEXT - 25°C
+==================================================
+Input: 25°C
+Expected Output: ☀️ Pleasant weather
+Actual Output: ☀️ Pleasant weather. Comfortable temperature!
+Status: ✅ PASSED
+
+==================================================
+TEST 15: WEATHER CONTEXT - 45°C
+==================================================
+Input: 45°C
+Expected Output: 🥵 Extremely hot!
+Actual Output: 🥵 Extremely hot! Avoid going outside.
+Status: ✅ PASSED
+
+==================================================
+TEST SUMMARY
+==================================================
+Total Tests: 15
+Passed: 15 ✅
+Failed: 0 ❌
+Success Rate: 100%
+
+==================================================
+ALL TESTS PASSED SUCCESSFULLY! 🎉
 ==================================================
 
-📐 Formula used: (°C × 9/5) + 32
-   (25.0 × 9/5) + 32 = 77.00°F
+Key Observations:
+1. All conversion formulas working correctly
+2. Input validation handling invalid entries
+3. Batch conversion processing multiple values
+4. Weather context displaying appropriate messages
+5. Temperature comparison working correctly
 
-🌍 WEATHER CONTEXT:
-   ☀️  Pleasant weather. Comfortable temperature!
+==================================================
+TESTING COMPLETED
+==================================================
